@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bbqmollusc</title>
+        <link rel="stylesheet" href="theme.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <img src="http://localhost/art/bbq.png" class="center" style="width: 15%;">
+        <h1>The Barbequed Mollusc</h1> 
+        <div>
+        <a href="requestfake.html" class="center">Request</a>
+        <a href="index.html" class="center">Portfolio</a>
+        <a href="costcalculator.html" class="center">Cost Calculator</a>
+        </div>
+        <div> 
+            <h1 style="font-size: 170%">Medium of Work:</h1>
+            <label>
+            <input type="radio" name="medium" value = "artwork" onclick="ona(this)"><span style= "left: 24px">Artwork</span>
+            <input type="radio" name="medium" value = "animation" onclick="ona(this)"><span style= "left: 210px">Animation</span>
+            </label>
+            <div id="artwork" style="display: none">
+                <h1 style="font-size: 150%">Type of Work:</h1>
+                <label>
+                <input type="radio" name="typea" id = "logodesign" value = "logodesign" onclick="onb(this)" checked="checked"><span style= "left: 35px">Logo</span>
+                <input type="radio" name="typea" value = "characterdesign" onclick="onb(this)"><span style= "left: 210px">Character</span>
+                <input type="radio" name="typea" value = "conceptwork" onclick="onb(this)"><span style= "left: 400px">Concept</span>
+                </label>    
+                <h1 style="font-size: 140%">Style</h1>
+                <span>Toon</span>
+                <div class="range">
+                  <input id = "style1" type="range" min="0" max="5" steps="1" value="0" class= "slider" style="width: 50%" onchange="onc(this)">
+                </div>
+                <span>Realistic</span>
+                <h1 style="font-size: 90%">Resolution</h1>
+                <span>Pixel Art</span>
+                <div class="range">
+                  <input id = "res1" type="range" min="0" max="400" steps="1" value="0" class= "slider" style="width: 65%" onchange="ond(this)">
+                </div>
+                <span>High Res</span>
+            </div>
+            <div id="animation" style="display: none">
+                <h1 style="font-size: 150%">Type of Work:</h1>
+                <label>
+                <input type="radio" name="typeb" id = "motiongraphics" value = "motiongraphics" onclick="onb(this)" checked="checked"><span style= "left: -15px">Motion Graphics</span>
+                <input type="radio" name="typeb" value = "spriteanimation" onclick="onb(this)"><span style= "left: 220px">Sprite</span>
+                <input type="radio" name="typeb" value = "fullanimation" onclick="onb(this)"><span style= "left: 425px">Film</span>
+                </label>    
+                <h1 style="font-size: 140%">Style</h1>
+                <span>Toon</span>
+                <div class="range">
+                  <input id = "style2" type="range" min="0" max="5" steps="1" value="0" class= "slider" style="width: 50%" onchange="onc(this)">
+                </div>
+                <span>Realistic</span>
+                <h1 style="font-size: 90%">Resolution</h1>
+                <span>Pixel Art</span>
+                <div class="range">
+                  <input id="res2" type="range" min="0" max="400" steps="1" value="0" class= "slider" style="width: 65%"  onchange="ond(this)">
+                </div>
+                <span>High Res</span>
+                <h1 style="font-size: 90%">Length</h1>
+                <span>1 Second</span>
+                <div class="range">
+                  <input id="time" type="range" min="0" max="900" steps="1" value="0" class= "slider" style="width: 75%" onchange="onf(this)">
+                </div>
+                <span>15 minutes</span>
+            </div>
+            <h1 id="price" style="font-size: 80%">[Please decide medium of work to begin]</h1>
+        </div>   
+        <script>
+            var base = 0.00;
+            var workadd = 0.00;
+            var stadd = 0.00;
+            var resadd = 0.00
+            var lenadd=0.00;
+            function ona(ina) {
+                console.log(ina.value);
+                document.getElementById(ina.value).style.display = "block";
+                if(ina.value=="animation"){
+                  document.getElementById("artwork").style.display = "none";
+                  base=5.00
+                  workadd = 4.00;
+                  stadd = 0.00;
+                  resadd = 0.00;
+                  lenadd = 0.00;
+                  document.getElementById("motiongraphics").checked = true;
+                  document.getElementById("style2").value = 0;
+                  document.getElementById("res2").value = 0;
+                  document.getElementById("time").value = 0;
+                }else{
+                  document.getElementById("animation").style.display = "none";
+                  base=0.00;
+                  workadd = 3.00;
+                  stadd = 0.00;
+                  resadd = 0.00;
+                  lenadd = 0.00;
+                  document.getElementById("logodesign").checked = true;
+                  document.getElementById("style1").value = 0;
+                  document.getElementById("res1").value = 0;
+                }
+                calc(base,workadd,stadd,resadd,lenadd);                
+            }
+            function onb(inb){
+                console.log(inb.value);
+                switch (inb.value){
+                    case "logodesign":
+                        workadd = 3.00;
+                        break;
+                    case "characterdesign":
+                        workadd = 5.00;
+                        break;
+                    case "conceptwork":
+                        workadd = 8.00;
+                        break;
+                    case "motiongraphics":
+                        workadd = 4.00;
+                        break;
+                    case "spriteanimation":
+                        workadd = 6.00;
+                        break;
+                    case "fullanimation":
+                        workadd = 7.00;
+                        break;
+                }
+                calc(base,workadd,stadd,resadd,lenadd);
+                     
+            }
+            function onc(inc){
+                console.log("style"+inc.value);
+                stadd = inc.value;
+                calc(base,workadd,stadd,resadd,lenadd)
+            }
+            function ond(ind){
+                console.log("Resolution"+ind.value);
+                resadd = ind.value;
+                calc(base,workadd,stadd,resadd,lenadd)
+            }
+            function onf(inf){
+                console.log("Length"+inf.value);
+                lenadd = inf.value;
+                calc(base,workadd,stadd,resadd,lenadd)
+            }
+            function calc(base, workadd,stadd,resadd,lenadd){
+                stadd=2*((base/2)+(workadd/7))*stadd;
+                resadd = (stadd/4+1)*(resadd/50)
+                lenadd = resadd*1.5*(lenadd/100);
+                var total = base+workadd+stadd+resadd+lenadd;
+                document.getElementById("price").innerHTML = "$"+(Math.floor(total*10)/10);
+            }
+            
+        </script>
+    </body>
+</html>

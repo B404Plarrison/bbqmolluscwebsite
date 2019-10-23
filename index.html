@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bbqmollusc</title>
+        <link rel="stylesheet" href="theme.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <img src="./bbq.png" class="center" style="width: 15%;">
+        <h1>The Barbequed Mollusc</h1> 
+        <div>
+        <a href="requestfake.html" class="center">Request</a>
+        <a href="index.html" class="center">Portfolio</a>
+        <a href="costcalculator.html" class="center">Cost Calculator</a>
+        </div>
+        <div class="center">
+            <div class="row" id="div1">
+            <div class="column">
+                <img src=./art/Illustration2.png id='Illustration2.png' class grid onclick="on(this)"; data-title="An exercise in shading, I attempted to create a piece of two helmeted individuals on top a minimalist background">
+                <img src=./art/Rubick.png id='Rubick.png' class grid onclick="on(this)"; data-title="A work in progress design for a graphic shirt, based off a decolorized Rubiks cube">
+                <img src=./art/ah!.png id='ah!.png' class grid onclick="on(this)"; data-title="An attempt in typographical design, inspired by another side project of mine">
+                <img src=./art/ahyes.png id='ahyes.png' class='grid' onclick="on(this);" data-title="My prior profile picture, commemorating the halloween season with a similar eerie color palette and imperfect look.">
+                <img src=./art/alexstory.png id='alexstory.png' class grid onclick="on(this)"; data-title="A concept art design, showing an explorer looking onto a mining ship">
+                <img src=./art/bbmolluSK.png id='bbmolluSK.png' class grid onclick="on(this)"; data-title="A piece of realistic art, attempting to create a conceptual new species of mollusk">
+                <img src=./art/bigpump.png id='bigpump.png' class grid onclick="on(this)"; data-title="A psychedelic piece of character art, meant to be used for a tabletop game">
+                <img src=./art/blood.png id='blood.png' class grid onclick="on(this)"; data-title="A quick character design, aiming for pure simplicity">
+                <img src=./art/branding.png id='branding.png' class grid onclick="on(this)"; data-title="A poster made for a club at school, themed after synthwave album art">
+                <img src=./art/bubble.png id='bubble.png' class grid onclick="on(this)"; data-title="A tar bubble with glowing eyes, an abstract industrial symbol">
+                <img src=./art/chargers.png id='chargers.png' class grid onclick="on(this)"; data-title="A crest themed after the mascot of my school, still unpolished">
+                <img src=./art/colorhead.png id='colorhead.png' class='grid' onclick="on(this);" data-title="An exercise in realism, I tried to portray a feeling of being overwhelmed. This piece was requested for a clients musical project">
+                <img src=./art/sunburnt.jpg id='sunburnt.jpg' class='grid' onclick="on(this);" data-title="A blend between realism in the hand and the cartoonish face under it">
+                <img src=./art/colorlow.png id='colorlow.png' class grid onclick="on(this)"; data-title="A very simple quick character design of a cartoonish robot">
+                <img src=./art/fireman.png id='fireman.png' class grid onclick="on(this)"; data-title="A blend of eerie and cute along with vibrant coloring">
+                <img src=./art/horsie.png id='horsie.png' class grid onclick="on(this)"; data-title="A full portrait of the mascot of my schoo, still unpolished">
+                <img src=./art/ifellasleep.png id='ifellasleep.png' class grid onclick="on(this)"; data-title="A mythical creature inspired by creatures like the chupacabra, modeled after a possum">
+                <img src=./art/isometric.png id='isometric.png' class grid onclick="on(this)"; data-title="An isometric logo utilizing shading to give a sense of depth">
+                <img src=./art/isometricotherside.png id='isometricotherside.png' class grid onclick="on(this)"; data-title="An expansion of the isometric logo as a full design">
+                <img src=./art/mollusk.png id='mollusk.png' class grid onclick="on(this)"; data-title="A simply shaded humanoid squid creature">
+                <img src=./art/np.png id='np.png' class grid onclick="on(this)"; data-title="A character poster modeled after Greek warriors">
+                <img src=./art/ouroborus.png id='ouroborus.png' class grid onclick="on(this)"; data-title="A less sinister intepretation of the ouroboros">
+                <img src=./art/plug.png id='plug.png' class grid onclick="on(this)"; data-title="A heavily shaded robot character inspired by a wall outlet">
+                <img src=./art/poster.png id='poster.png' class grid onclick="on(this)"; data-title="A more simple prototype of a computer science club poster">
+                <img src=./art/scioly1.png id='scioly1.png' class grid onclick="on(this)"; data-title="The logo for a science based club">
+                <img src=./art/skinhead.png id='skinhead.png' class grid onclick="on(this)"; data-title="A simple human-based character design">
+                <img src=./art/skull.png id='skull.png' class grid onclick="on(this)"; data-title="An inversion of common themes around skull imagery">
+                <img src=./art/thunderduck.png id='thunderduck.png' class grid onclick="on(this)"; data-title="A duck with thunder behind it">   
+                <img src=./art/man.gif id='man.gif' class grid onclick="on(this)"; data-title="An experimentation with pixel animation, reflecting a futuristic biker type character in an elevator">
+            </div>     
+        </div>
+        </div>
+        <div id="overlay" onclick="off()">
+            <img src=./art/bbq.png id='tamp' class = "center">
+            <p id="text">My current discord profile picture</p>
+        </div>
+        <script>
+            function on(ta) {
+              document.getElementById("overlay").style.display = "block";
+              console.log(ta.src);
+              var im = document.getElementById("tamp");
+              im.src = ta.src
+              document.getElementById("text").textContent = ta.dataset.title;
+              document.getElementById("overlay").appendChild(im);
+              
+            }
+
+            function off() {
+              document.getElementById("overlay").style.display = "none";
+            }
+</script>
+        
+        
+    </body>
+</html>

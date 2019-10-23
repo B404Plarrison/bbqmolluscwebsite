@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:100,100i,200,200i,300,300i,400,400i,500');
+h1{
+    color:darkmagenta;
+    font-family: 'Raleway',fantasy;
+    font-size: 80x;
+    text-align: center
+}
+h2{
+    color:darkmagenta;
+    font-family: 'Open Sans',fantasy;
+    font-size: 80x;
+    text-align: center
+}
+span{
+    color:darkmagenta;
+    font-family: 'Raleway',fantasy;
+    font-size: 80x;
+    text-align: center
+}
+.center img{
+    width: 20%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+a:link, a:visited {
+  font-family: 'Open Sans',fantasy;
+  font-size: 190x;
+  background-color: aquamarine;
+  color: darkmagenta;
+  padding: 5px 10px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color:aqua;
+}
+div{
+    text-align:center;
+}
+html{
+    background-color:lightgoldenrodyellow;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(0, 255, 255,0.1);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 65%;
+  max-width: 85%;
+  padding: 0 13px;
+}
+
+.column img {
+  margin: 1%;
+  vertical-align: center
+  width: 25%;
+  transition:transform 0.25s ease;
+}
+.column img:hover{
+  width: 26%;
+ -webkit-transform:scale(1.005); /* or some other value */
+ transform:scale(1.005)
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  .column {
+    flex: 50%;
+    max-width: 90%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+ #overlay {
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+#tamp{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  width = 100% !important;
+  max-width: 600px;
+    
+}
+#text{
+  position: relative;
+  top: 50%;
+  left: 75%;
+  font-size: 24px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  max-width: 400px;!important
+    
+}
+button{
+  font-family: 'Open Sans',fantasy;
+  background-color: darkmagenta; /* Green */
+  border: none;
+  color: aquamarine;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 50px;
+  font-size: 16px;
+}
+input[type="radio"]{
+    -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color: darkmagenta;
+     color: aquamarine;
+     padding: 15px 32px;
+     height: 50px;
+     width: 180px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;  
+}
+input[type="radio"]:checked{
+    background-color: magenta;
+}
+label {
+     display: inline-flex; 
+     padding: 5px; 
+     position: relative; 
+ }
+label span {
+  position: absolute;
+  top: 35%;
+  margin-left: 40.5px;
+  font-size: 20px;
+  overflow: hidden;
+  line-height: 1;
+  text-align: center;
+  color: aquamarine;
+  pointer-events: none;
+}
+.range{
+    width: "100%";
+    display: inline;
+    margin-left: auto;
+    margin-right:auto;
+    align-self: center;
+}
+.slider{
+    -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 60%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: darkmagenta; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: aquamarine; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: aquamarine; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+textarea{
+    border-radius: 5px;
+    font-family: 'Open Sans',fantasy;
+    margin: 15px;
+    color: darkmagenta;
+    background-color: lightyellow;
+    
+}
