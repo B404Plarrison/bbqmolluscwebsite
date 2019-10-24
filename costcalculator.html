@@ -143,7 +143,7 @@
             function calc(base, workadd,stadd,resadd,lenadd){
                 stadd=1.5*((base/2)+(workadd/7))*stadd;
                 resadd = 0.5*(stadd/4+1)*(resadd/50);
-                lenadd = 1.45*resadd*(lenadd/100);
+                lenadd = 1.75*resadd*(lenadd/100);
                 var total = base+workadd+stadd+resadd+lenadd;
                 document.getElementById("price").innerHTML = "$"+(Math.floor(total*10)/10).toFixed(2);
             }
