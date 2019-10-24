@@ -65,7 +65,7 @@
                 </div>
                 <span>15 minutes</span>
             </div>
-            <h1 id="price" style="font-size: 80%">[Please decide medium of work to begin]</h1>
+            <h1 id="price" style="font-size: 200%">[Please decide medium of work to begin]</h1>
         </div>   
         <script>
             var base = 0.00;
@@ -79,7 +79,7 @@
                 if(ina.value=="animation"){
                   document.getElementById("artwork").style.display = "none";
                   base=5.00
-                  workadd = 4.00;
+                  workadd = 3.00;
                   stadd = 0.00;
                   resadd = 0.00;
                   lenadd = 0.00;
@@ -141,11 +141,11 @@
                 calc(base,workadd,stadd,resadd,lenadd)
             }
             function calc(base, workadd,stadd,resadd,lenadd){
-                stadd=2*((base/2)+(workadd/7))*stadd;
-                resadd = (stadd/4+1)*(resadd/50);
-                lenadd = resadd*1.5*(lenadd/100);
+                stadd=1.5*((base/2)+(workadd/7))*stadd;
+                resadd = 0.5*(stadd/4+1)*(resadd/50);
+                lenadd = 1.45*resadd*(lenadd/100);
                 var total = base+workadd+stadd+resadd+lenadd;
-                document.getElementById("price").innerHTML = "$"+(Math.floor(total*10)/10);
+                document.getElementById("price").innerHTML = "$"+(Math.floor(total*10)/10).toFixed(2);
             }
             
         </script>
