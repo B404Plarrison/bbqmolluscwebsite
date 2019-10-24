@@ -4,19 +4,19 @@ h1{
     color:darkmagenta;
     font-family: 'Raleway',fantasy;
     font-size: 80x;
-    text-align: center
+    text-align: center;
 }
 h2{
     color:darkmagenta;
     font-family: 'Open Sans',fantasy;
     font-size: 80x;
-    text-align: center
+    text-align: center;
 }
 span{
     color:darkmagenta;
     font-family: 'Raleway',fantasy;
     font-size: 80x;
-    text-align: center
+    text-align: center;
 }
 .center img{
     width: 20%;
@@ -71,19 +71,19 @@ html{
 .column {
   flex: 65%;
   max-width: 85%;
-  padding: 0 13px;
+  padding: 0 7%;
 }
 
 .column img {
   margin: 1%;
-  vertical-align: center
+  vertical-align:middle; 
   width: 25%;
-  transition:transform 0.25s ease;
+  transition:transform 0.5s ease;
 }
 .column img:hover{
   width: 26%;
- -webkit-transform:scale(1.005); /* or some other value */
- transform:scale(1.005)
+ -webkit-transform:scale(1.25); /* or some other value */
+ transform:scale(1.25);
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */

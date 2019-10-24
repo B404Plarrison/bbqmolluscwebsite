@@ -6,10 +6,10 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     </head>
     <body>
-        <img src="http://localhost/art/bbq.png" class="center" style="width: 15%;">
+        <img src="./art/JPEG/bbq.jpg" class="center" style="width: 15%;">
         <h1>The Barbequed Mollusc</h1> 
         <div>
-        <a href="requestfake.html" class="center">Request</a>
+        <a href="request.html" class="center">Request</a>
         <a href="index.html" class="center">Portfolio</a>
         <a href="costcalculator.html" class="center">Cost Calculator</a>
         </div>
@@ -142,7 +142,7 @@
             }
             function calc(base, workadd,stadd,resadd,lenadd){
                 stadd=2*((base/2)+(workadd/7))*stadd;
-                resadd = (stadd/4+1)*(resadd/50)
+                resadd = (stadd/4+1)*(resadd/50);
                 lenadd = resadd*1.5*(lenadd/100);
                 var total = base+workadd+stadd+resadd+lenadd;
                 document.getElementById("price").innerHTML = "$"+(Math.floor(total*10)/10);

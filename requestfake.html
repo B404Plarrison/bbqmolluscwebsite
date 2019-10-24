@@ -9,13 +9,16 @@
         <img src="http://localhost/art/bbq.png" class="center" style="width: 15%;">
         <h1>The Barbequed Mollusc</h1> 
         <div>
-        <a href="requestfake.html" class="center">Request</a>
+        <a href="request.html" class="center">Request</a>
         <a href="index.html" class="center">Portfolio</a>
         <a href="costcalculator.html" class="center">Cost Calculator</a>
         </div>
-        <div style="margin: 15px" >
-            
-            <h2>Send an email to <a class= "embedlinks" href="mailto: ragnomed@gmail.com">ragnomed@gmail.com</a> with the details of your request</h2>
+        <div style="margin: 15px">
+            <form action="/requestsent" method="post">
+                <textarea name="request" rows="10" cols="35">What is your request?</textarea>
+                <br>
+                <button>Submit</button>
+            </form>
         </div>
     </body>
 </html>
