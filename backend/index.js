@@ -4,10 +4,11 @@ const mysql = require('mysql')
 const bodyParser = require('body-parser')
 const gen = require('word-concat-js')
 
+app.use(express.static(__dirname+"/html"))
 
 app.use(bodyParser.urlencoded({extended:false}))
 
-app.use(express.static('../'))
+
 
 async function keygen(){
     var string = gen(3, 4, 10, "_")
@@ -41,10 +42,22 @@ function getConnection(){
     })
 }
 
-app.get("/",(req,res)=>{
+app.get("/home",(req,res)=>{
     console.log("started")
+    res.sendFile(__dirname+"/html/index.html")
 })
-
+app.get("/request",(req,res)=>{
+    console.log("started")
+    res.sendFile(__dirname+"/html/request.html")
+})
+app.get("/costcalculator",(req,res)=>{
+    console.log("started")
+    res.sendFile(__dirname+"/html/costcalculator.html")
+})
+app.post("/ok",(req,res)=>{
+    console.log("test passed :)")
+    res.sendFile(__dirname+"/html/request.html")
+})
 app.post('/requestsent',async (req, res)=>{
     console.log('creating request...')
     const requesta = req.body.request
