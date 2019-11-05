@@ -49,12 +49,11 @@
         </div>
         </div>
         <div id="overlay" onclick="off()">
-            <img src=./bbqloading.gif id='tamp' class = "center">
+            <img src=./art/JPEG/bbq.jpg id='tamp' class = "center">
             <p id="text">My current discord profile picture</p>
         </div>
         <script>
             function on(ta) {
-                
               document.getElementById("overlay").style.display = "block";
               var srctemp = ta.src.replace("/JPEG","").replace(".jpg",".png")
               console.log(srctemp)
@@ -68,8 +67,6 @@
 
             function off() {
               document.getElementById("overlay").style.display = "none";
-              var im = document.getElementById("tamp");
-              im.src='./bbqloading.gif'
             }
 </script>
         
